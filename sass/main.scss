@@ -13,7 +13,7 @@ body {
   background-color: #1b1b1b;
   color: #fff;
   font-family: 'Manrope', sans-serif;
-  padding-top: 3.1rem;
+  padding: 3.1rem 0 0;
 }
 
 $color-primary: #ff006a;
@@ -22,6 +22,8 @@ $color-primary: #ff006a;
   max-width: 1100px;
   margin: 0 auto;
 }
+
+////////////////////TYPOGRAPHY///////////////////////
 
 .heading-1 {
   font-size: 3.5rem;
@@ -42,6 +44,8 @@ $color-primary: #ff006a;
   margin-bottom: .8rem;
 }
 
+////////////////////HEADER///////////////////////
+
 .header {
   position: fixed;
   top: 0;
@@ -55,6 +59,11 @@ $color-primary: #ff006a;
     justify-content: center;
     align-items: center;
     position: relative;
+    
+    // @media screen and (max-width: 500px) {
+    //   justify-content: left;
+    //   margin: 0;
+    // }
   }
   &__link {
     text-decoration: none;
@@ -67,10 +76,18 @@ $color-primary: #ff006a;
     &:hover {
       color: $color-primary;
     }
+    
+    @media screen and (max-width: 600px) {
+      font-size: 1.6rem;
+    }
+    @media screen and (max-width: 500px) {
+      margin: 0 .5rem;
+      font-size: 1.4rem;
+    }
   }
   &__link2 {
     position: absolute;
-    right: .5rem;
+    right: 2.5rem;
     text-decoration: none;
     color: #fff;
     font-size: 1.6rem;
@@ -78,7 +95,11 @@ $color-primary: #ff006a;
     justify-self: flex-end;
     display: flex;
     align-items: center;
-
+    
+    @media screen and (max-width: 600px) {
+      position: relative;
+    }
+    
     span {
       padding: 1rem 0;
     }
@@ -88,6 +109,11 @@ $color-primary: #ff006a;
     width: 3rem;
     height: 3rem;
   }
+  .github-span {
+    @media screen and (max-width: 500px) {
+      display: none;
+    }
+  }
   
   &__navigation {
     width: 100%;
@@ -96,77 +122,121 @@ $color-primary: #ff006a;
     justify-content: center;
     padding: 2.5rem .5rem;
   }
-
+  
 }
 
 .is-scrolled {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+////////////////////WORK///////////////////////
+
 .work {
   margin: 9rem auto 0;
   max-width: 70rem;
-
+  padding: 0 3rem;
+  
   h1, h2 {
     text-align: center;
   }
   h2 {
     margin-top: 6rem;
   }
-
-
+  
+  
   .btn-inline {
     margin-right: 1rem;
   }
-
+  
   &__item {
     display: flex;
     height: auto;
     margin-top: 3rem;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+    }
   }
-
+  
   &__left-col {
-    flex-basis: 80%;
-
+    flex-basis: auto;
+    margin-right: auto;
+    
     & :first-child {
       margin-right: 1.5rem;
     }
   }
+  
   &__right-col {
     padding-left: 1rem;
-    flex-basis: 20%;
+    flex-basis: auto;
+
+    @media screen and (max-width: 720px) {
+      padding-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
+
+////////////////////SKILLS///////////////////////
 
 .skills {
   margin: 9rem auto 0;
   max-width: 70rem;
-  padding-bottom: 15rem;
+  padding: 0 3rem 15rem;
   
   h1 {
     text-align: center;
     margin-bottom: 5rem;
   }
-
+  
   &__box {
     display: flex;
 
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+    }
+    
     & * {
       flex-basis: 33%;
+      
+      @media screen and (max-width: 650px) {
+        flex-basis: 100%;
+      }
     }
   }
-
+  
+  &__list {
+    padding: 1rem;
+  }
+  
   &__list-item {
     list-style: square;
     font-size: 2rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    padding: 1rem;
+  }
+  
+  &__subitem {
+    list-style: none;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
   }
 }
+
+////////////////////FOOTER///////////////////////
 
 .footer {
   background-color: #000;
   padding: 10rem 5rem;
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
   
   &__text {
     font-size: 1.8rem;
@@ -175,13 +245,14 @@ $color-primary: #ff006a;
   }
 }
 
+////////////////////ELEMENTS///////////////////////
 
 .btn-inline {
   font-size: 1.6rem;
   font-weight: 300;
   text-decoration: none;
   color: #fff;
-
+  
   &:hover {
     color: $color-primary;
     transition: all .5s ease-in-out;

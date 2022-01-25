@@ -20,7 +20,7 @@
         <a class="header__link hover-effect" href="#skills">Skills</a>
         <a class="header__link hover-effect" href="#footer">Contacts</a>
       </nav>
-      <a class="header__link2" href="https://github.com/Alex-Rockwell?tab=repositories" target="_blank"><img src="./github.png" class="github-icon"><span>GitHub</span></a>
+      <a class="header__link2" href="https://github.com/Alex-Rockwell?tab=repositories" target="_blank"><img src="./github.png" class="github-icon"><span class="github-span">GitHub</span></a>
       
     </div>
   </header class="header">
@@ -98,17 +98,23 @@
 
       <div class="skills__box">
 
-        <ul>
-          <li class="skills__list-item">HTML</li>
-          <li class="skills__list-item">CSS</li>
+        <ul class="skills__list">
+          <li class="skills__list-item">HTML/CSS
+            <li class="skills__subitem">Адаптивная, кроссплатформенная верстка</li>
+            <li class="skills__subitem">Знание методологии БЭМ</li>
+          </li>
           <li class="skills__list-item">SASS</li>
         </ul>
-        <ul>
+        <ul class="skills__list">
           <li class="skills__list-item">JavaScript</li>
-          <li class="skills__list-item">React, Redux</li>
-          <li class="skills__list-item">Webpack, npm</li>
+          <li class="skills__list-item">React
+            <li class="skills__subitem">React-Redux</li>
+            <li class="skills__subitem">React-Router</li>
+            <li class="skills__subitem">Material-UI</li>
+          </li>
         </ul>
-        <ul>
+        <ul class="skills__list">
+          <li class="skills__list-item">Webpack, npm</li>
           <li class="skills__list-item">Git</li>
           <li class="skills__list-item">English: intermediate</li>
         </ul>
@@ -119,8 +125,10 @@
   </div>
 
   <footer class="footer" id="footer">
-    <p class="footer__text">Contacts</p>
-    <p class="footer__text">vin-ag@gmail.com</p>
+    <div class="footer__container">
+      <p class="footer__text">Contacts</p>
+      <p class="footer__text">vin-ag@gmail.com</p>
+    </div>
   </footer>
 </body>
 </html>
