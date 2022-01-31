@@ -27,19 +27,21 @@ body {
 
 .heading-3 {
   font-size: 1.6rem;
-  font-weight: 500; }
+  font-weight: 500;
+  margin: 1rem 0 .5rem; }
 
 .text {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.5;
-  margin-bottom: .8rem; }
+  margin-bottom: .5rem; }
 
 .header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  z-index: 50; }
   .header__container {
     max-width: 1100px;
     margin: 0 auto;
@@ -99,31 +101,29 @@ body {
   margin: 9rem auto 0;
   max-width: 70rem;
   padding: 0 3rem; }
-  .work h1, .work h2 {
-    text-align: center; }
-  .work h2 {
-    margin-top: 6rem; }
+  .work h1 {
+    text-align: center;
+    margin-bottom: 5rem; }
   .work .btn-inline {
     margin-right: 1rem; }
-  .work__item {
+  .work .flex-container {
     display: flex;
-    height: auto;
-    margin-top: 3rem; }
-    @media screen and (max-width: 720px) {
-      .work__item {
-        flex-direction: column; } }
-  .work__left-col {
-    flex-basis: auto;
-    margin-right: auto; }
-    .work__left-col :first-child {
-      margin-right: 1.5rem; }
-  .work__right-col {
-    padding-left: 1rem;
-    flex-basis: auto; }
-    @media screen and (max-width: 720px) {
-      .work__right-col {
-        padding-left: 0;
-        margin-top: 1rem; } }
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 3rem 0; }
+    .work .flex-container > *:nth-child(odd) {
+      margin-right: auto; }
+  .work__item {
+    flex-basis: 40%; }
+  .work__img-cont {
+    transition: .5s ease; }
+  .work__img-cont:hover {
+    transform: scale(1.05); }
+  .work__img {
+    width: 30rem;
+    overflow: hidden; }
+  .work__text, .work__links {
+    text-align: center; }
 
 .skills {
   margin: 9rem auto 0;
@@ -169,7 +169,7 @@ body {
     line-height: 1.7; }
 
 .btn-inline {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 300;
   text-decoration: none;
   color: #fff; }
