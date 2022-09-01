@@ -21,6 +21,9 @@ body {
   font-size: 3.5rem;
   font-weight: 300;
   letter-spacing: 3px; }
+  @media screen and (max-width: 450px) {
+    .heading-1 {
+      font-size: 2.5rem; } }
 
 .heading-2 {
   font-weight: 300; }
@@ -99,28 +102,39 @@ body {
 
 .work {
   margin: 9rem auto 0;
-  max-width: 70rem;
+  max-width: 80vw;
   padding: 0 3rem; }
+  @media screen and (max-width: 450px) {
+    .work {
+      margin: 6rem auto 0; } }
   .work h1 {
     text-align: center;
     margin-bottom: 5rem; }
   .work .btn-inline {
     margin-right: 1rem; }
   .work .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 3rem 0; }
-    .work .flex-container > *:nth-child(odd) {
-      margin-right: auto; }
-  .work__item {
-    flex-basis: 40%; }
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-auto-rows: 300px;
+    row-gap: 2rem;
+    column-gap: 3rem; }
+    @media (max-width: 770px) {
+      .work .flex-container {
+        grid-template-columns: repeat(2, 50%);
+        grid-auto-rows: 250px; } }
+    @media (max-width: 450px) {
+      .work .flex-container {
+        grid-template-columns: repeat(1, 100%);
+        grid-auto-rows: 250px; } }
   .work__img-cont {
-    transition: .5s ease; }
+    transition: .5s ease;
+    width: 100%;
+    height: auto; }
   .work__img-cont:hover {
     transform: scale(1.05); }
   .work__img {
-    width: 30rem;
+    width: 100%;
+    height: auto;
     overflow: hidden; }
   .work__text, .work__links {
     text-align: center; }
@@ -129,9 +143,16 @@ body {
   margin: 9rem auto 0;
   max-width: 70rem;
   padding: 0 3rem 15rem; }
+  @media screen and (max-width: 450px) {
+    .skills {
+      margin: 6rem auto 0;
+      padding: 0 3rem 10rem; } }
   .skills h1 {
     text-align: center;
     margin-bottom: 5rem; }
+    @media screen and (max-width: 450px) {
+      .skills h1 {
+        margin-bottom: 3rem; } }
   .skills__box {
     display: flex; }
     @media screen and (max-width: 650px) {
